@@ -1,1 +1,36 @@
-<p>home works!</p>
+  <!-- Highlight Card -->
+  <div class="card highlight-card card-small">
+
+    <!-- <span>{{ title }}</span> -->
+
+  </div>
+
+  <!-- Resources -->
+  <h2>{{ title }}</h2>
+  <p>Please enter detailes below to get started:</p>
+
+  <div class="card-container card">
+
+    <form [formGroup] = "userForm" (ngSubmit) = "submitForm(userForm)">
+
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Your Name</label>
+        <input type="text" class="form-control" id="exampleInputText" placeholder="Your Name" formControlName="name" />
+        <div *ngIf = "userForm.get('name')?.touched && userForm.get('name')?.invalid" >
+          <span *ngIf = "userForm.get('name')?.errors" class="invalid-feedback">Name is Required</span>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Your Email" formControlName="email">
+        <div *ngIf = "userForm.get('email')?.touched && userForm.get('email')?.invalid" >
+          <span *ngIf = "userForm.get('email')?.errors" class="invalid-feedback">Email is Required</span>
+        </div>
+      </div>
+
+      <button [disabled] = "userForm.invalid" type="submit" class="btn btn-outline-primary">Proceed</button>
+      &nbsp;
+      <button type="button" class="btn btn-outline-warning" (click)="reset()">Reset</button>
+    </form>
+
+  </div>
