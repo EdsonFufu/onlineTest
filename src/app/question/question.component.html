@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid">
     <div class="card  mt-3 mb-5">
         <div class="card-header">
             <div class="d-flex justify-content-between p-3">
@@ -14,6 +14,40 @@
         </div>
         <div class="card-body " *ngIf="!quizCompleted">
             <ng-container *ngIf="!quizCompleted">
+
+
+                <div class="progress mb-3">
+                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" aria-valuemin="0"
+                        aria-valuemax="100">
+                    </div>
+                </div>
+                <div class="question">
+                    <div class="text">
+                        <h5>{{ questions[currentQuestion]?.questionText }}</h5>
+                    </div>
+                    <div class="options">
+                        <ul>
+                            <ng-container *ngFor="let option of questions[currentQuestion]?.options;let i = index">
+                                <li (click)="answer(currentQuestion + 1, option)">
+                                    {{option.label +". " + option.text }}
+                                </li>
+                            </ng-container>
+                        </ul>
+                    </div>
+                </div>
+                <hr/>
+                <div class="d-flex justify-content-around py-3">
+                    <div>
+                        <h5>{{ points }} Points</h5>
+                    </div>
+                    <div>
+                        <span>Question {{ currentQuestion }} of {{ questions.length }}</span>
+                    </div>
+                    <div class="timer">
+                        <h5>Time remaining : <b>{{ counter }} </b> sec <i class="fas fa-clock"></i></h5>
+                    </div>
+                </div>
+
             </ng-container>
         </div>
         <div class="card-footer" *ngIf="quizCompleted">
