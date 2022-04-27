@@ -1,0 +1,114 @@
+{
+  "questions": [
+    {
+      "questionText": "Which of the following is the correct syntax for writing AngularJS expressions?",
+      "options": [
+        { "label":"A","text": "(expression)" },
+        { "label":"B","text": "{{{expression}}}" },
+        { "label":"C","text": "[expression]" },
+        { "label":"D","text": "{{expression}}", "correct": true }
+      ]
+    },  
+    {
+      "questionText":"Which of the following is used to share data between controller and view in AngularJS?",
+      "options": [
+        { "label":"A","text": "using Model"},
+        { "label":"B","text": "using services", "correct": true },
+        { "label":"C","text": "using factory"},
+        { "label":"D","text": "using $scope"}
+      ]
+    },
+    {
+      "questionText":"The . . . . . decorator allows us to define the pipe name that is globally available for use in any template in the across application",
+      "options": [
+        {"label":"A", "text": "pipeName" },
+        {"label":"B", "text": "pipeDeco" },
+        {"label":"C", "text": "Pipe", "correct": true  },
+        {"label":"D", "text": "None"}
+      ]
+    },
+    {
+      "questionText":"Observables help you manage . . . . . . . . data",
+      "options": [
+        {"label":"A", "text": "synchronous" },
+        {"label":"B", "text": "asynchronous", "correct": true },
+        {"label":"C", "text": "Both asynchronous & synchronous"  },
+        {"label":"D", "text": "None of above"}
+      ]
+    },
+    {
+      "questionText":"If you chain multiple pipes together, they are executed",
+      "options": [
+        {"label":"A", "text": "In parallel" },
+        {"label":"B", "text": "IFO order" },
+        {"label":"C", "text": "in the order in which you specify them", "correct": true  },
+        {"label":"D", "text": "None of above"}
+      ]
+    },
+    {
+      "questionText":"Which of the following is true about the currency filter?",
+      "options": [
+        {"label":"A", "text": "A currency filter is used to format the text in a currency format", "correct": true},
+        {"label":"B", "text": " A currency filter is a function that takes text as input."},
+        {"label":"C", "text": "Both A and B" },
+        {"label":"D", "text": "None of the above"}
+      ]
+    },
+    {
+      "questionText":"Which of the following is not built-in pipe in Angular?",
+      "options": [
+        {"label":"A", "text": "PercentPipe" },
+        {"label":"B", "text": "CurrencyPipe" },
+        {"label":"C", "text": " DatePipe" },
+        {"label":"D", "text": "DataPipe" ,"correct": true }
+      ]
+    },
+    {
+      "questionText":"Which of the following is an advantage of AngularJS?",
+      "options": [
+        {"label":"A", "text": "AngularJS code is unit testable." },
+        {"label":"B", "text": "AngularJS provides reusable components." },
+        {"label":"C", "text": " AngularJS uses dependency injection and makes use of separation of concerns." },
+        {"label":"D", "text": "All of the above" ,"correct": true }
+      ]
+    },  
+    {
+      "questionText":" Which of the following is not a valid AngularJS filter?",
+      "options": [
+        {"label":"A", "text": "lowercase"},
+        {"label":"B", "text": "orderby"},
+        {"label":"C", "text": "email", "correct": true },
+        {"label":"D", "text": "currency"}
+      ]
+    },
+    {
+      "questionText":"Which of the following statement is true about $dirty flag?",
+      "options": [
+        {"label":"A", "text": "$dirty flag is used to state that the form has invalid data." },
+        {"label":"B", "text": "$dirty flag is used to state that value has been changed.", "correct": true  },
+        {"label":"C", "text": "Both of the above." },
+        {"label":"D", "text": "None of above"}
+      ]
+    }
+  ]
+}
+
+
+
+
+
+ 
+  
+  
+  
+  
+ 
+  
+  
+
+
+
+
+
+
+

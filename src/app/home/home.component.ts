@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
 
   submitForm(userForm:FormGroup){
     console.log("form submitted",userForm.value)
-    localStorage.setItem("user",userForm.value)
+    localStorage.setItem("user",JSON.stringify(userForm.value))
     this.router.navigate(["question"])
   }
   reset(){
