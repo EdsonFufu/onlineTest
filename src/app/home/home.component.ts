@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup,FormControl,Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +15,7 @@ export class HomeComponent implements OnInit {
 
   })
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
     this.userForm = new FormGroup({
@@ -25,6 +26,8 @@ export class HomeComponent implements OnInit {
 
   submitForm(userForm:FormGroup){
     console.log("form submitted",userForm.value)
+    localStorage.setItem("user",userForm.value)
+    this.router.navigate(["question"])
   }
   reset(){
     this.userForm.reset()
