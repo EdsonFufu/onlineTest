@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { QuestionService } from '../question.service';
 
 @Component({
   selector: 'app-question',
@@ -14,13 +15,16 @@ export class QuestionComponent implements OnInit {
   public counter: number = 1800;
   public correctAnswers: number = 0;
   public questions: any = [];
-  public quizCompleted = true;
+  public quizCompleted = false;
 
-  constructor() { }
+  constructor(private questionService:QuestionService) { }
 
   ngOnInit(): void {
     this.name = JSON.parse(localStorage.getItem("user")!).name
     this.email = JSON.parse(localStorage.getItem("user")!).email
+    this.questions = this.questionService.getQuestions().subscribe(qs => {
+      this.questions = qs.questions
+    })
   }
 
 }
