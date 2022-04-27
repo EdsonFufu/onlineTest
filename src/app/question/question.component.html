@@ -44,7 +44,7 @@
                         <span>Question {{ currentQuestion }} of {{ questions.length }}</span>
                     </div>
                     <div class="timer">
-                        <h5>Time remaining : <b>{{ counter }} </b> sec <i class="fas fa-clock"></i></h5>
+                        <h5>Time remaining : <b>{{ counter | formatTime }} </b> sec <i class="fas fa-clock"></i></h5>
                     </div>
                 </div>
 
